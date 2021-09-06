@@ -4,6 +4,9 @@
   "description": "системные сервисы панели оператора (текущее время и его установка, ip-адрес, температура процессора, свободное место на диске БД, копирование БД на вставленную флэшку)",
   "main": "index.ts",
   "scripts": {
+    "build": "tsc",
+    "dev": "set APP_DEBUG=true & node dist",
+    "start": "set APP_DEBUG=false & node dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,10 +14,13 @@
     "url": "git+https://github.com/GerasimGerasimov/dexop-system-services.git"
   },
   "keywords": [
-    "#linux#system"
+    "#linux#system#setings"
   ],
   "author": "Gerasimov V/ Gerasim",
   "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.11.2"
+  },
   "bugs": {
     "url": "https://github.com/GerasimGerasimov/dexop-system-services/issues"
   },
