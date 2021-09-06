@@ -1,0 +1,22 @@
+{
+  "name": "dexop-system-services-backend",
+  "version": "1.0.0",
+  "description": "системные сервисы панели оператора (текущее время и его установка, ip-адрес, температура процессора, свободное место на диске БД, копирование БД на вставленную флэшку)",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GerasimGerasimov/dexop-system-services.git"
+  },
+  "keywords": [
+    "#linux#system"
+  ],
+  "author": "Gerasimov V/ Gerasim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GerasimGerasimov/dexop-system-services/issues"
+  },
+  "homepage": "https://github.com/GerasimGerasimov/dexop-system-services#readme"
+}
