@@ -43,9 +43,14 @@ export class HttpServer{
     }
 
     private async getLocalTime (request: any, response: any) {
+        const date = new Date();
         try {
-            response.status(200).json({status:'OK',
-                                        msg: 'getLocalTime'})
+            response.json({ status:'OK',
+                            time: {
+                                ISO: date.toISOString(),
+                                Local: date.toLocaleString(),
+                                UNIX:date.valueOf()}
+                            });
         } catch (e) {
             response.status(400).json({status:'Error',
                                         msg: e.message || ''})
