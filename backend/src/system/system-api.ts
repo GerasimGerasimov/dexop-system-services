@@ -1,7 +1,9 @@
 const exec = require('child_process').exec;
 
 export async function getIP():Promise<string> {
-  return await execShellCommand('hostname -I');
+  const result: string = (await execShellCommand('hostname -I'))
+                        .replace(/\n/g, '');
+  return result;
 }
 
 async function execShellCommand(cmd): Promise<string> {

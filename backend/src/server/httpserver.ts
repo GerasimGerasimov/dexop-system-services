@@ -28,18 +28,21 @@ export class HttpServer{
         this.https = http.createServer(app).listen(this.port);
     }
 
-    private async getLocalIP (response: any) {
+    private async getLocalIP (request: any, response: any) {
+        let IP: string = 'unnown';
         try {
-            const IP: string = await getIP();
-            response.status(200).json({status:'OK',
-                                        msg: IP})
+            IP = await getIP();
+            response.json({ status:'OK',
+                            time: new Date().toISOString(),
+                            result: IP});
         } catch (e) {
             response.status(400).json({status:'Error',
                                         msg: e.message || ''})
         }
+        console.log(`get /v1/IP/ ${IP}`)
     }
 
-    private async getLocalTime (response: any) {
+    private async getLocalTime (request: any, response: any) {
         try {
             response.status(200).json({status:'OK',
                                         msg: 'getLocalTime'})
