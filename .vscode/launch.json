@@ -9,6 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "preLaunchTask": "build",
+      "args": ["5011"],
       "skipFiles": [
         "<node_internals>/**"
       ],
