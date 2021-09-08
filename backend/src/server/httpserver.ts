@@ -34,7 +34,7 @@ export class HttpServer{
             IP = await getIP();
             response.json({ status:'OK',
                             time: new Date().toISOString(),
-                            result: IP});
+                            data: IP});
         } catch (e) {
             response.status(400).json({status:'Error',
                                         msg: e.message || ''})
@@ -46,7 +46,7 @@ export class HttpServer{
         const date = new Date();
         try {
             response.json({ status:'OK',
-                            time: {
+                            data: {
                                 ISO: date.toISOString(),
                                 Local: date.toLocaleString(),
                                 UNIX:date.valueOf()}
